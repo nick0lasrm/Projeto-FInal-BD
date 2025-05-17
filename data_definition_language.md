@@ -1,0 +1,15 @@
+## DDL - DATA DEFINITION LANGUAGE
+
+``` sql 
+
+CREATE TABLE cliente(
+    id SERIAL PRIMARY KEY
+)
+
+CREATE TABLE pessoa_fisica (
+    id SERIAL PRIMARY KEY REFERENCES cliente(id) ON DELETE CASCADE,
+    nome VARCHAR(100) NOT NULL,
+)
+
+
+```
